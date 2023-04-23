@@ -1,0 +1,39 @@
+<button class="block navbar-burger text-red-50 hover:text-red-200 focus:outline-none" (click)="toggleMenu()">
+    <svg class="h-4 w-4" fill="currentColor " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <title>Mobile menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  </button>
+  <div class="navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" [ngClass]="{'hidden': !menuOpen}">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25" (click)="toggleMenu()"></div>
+    <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+      <div class="flex items-center mb-12">
+        <a class="mr-auto text-2xl font-semibold leading-none" aria-current="page" routerLink="">
+          <img class="h-8" src="assets/plain-assets/logos/plain-red.svg" alt="" width="auto">
+        </a>
+        <button class="navbar-close" (click)="toggleMenu()">
+          <svg class="h-6 w-6 cursor-pointer hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/about">About</a></li>
+          <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/blogs">Blogs</a></li>
+          <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/newsletter">Newsletter</a></li>
+          <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div class="pt-6">
+          <a class="block px-5 py-3 mb-3 text-sm text-center bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200" routerLink="/signin">Sign in</a>
+          <a class="block px-5 py-3 text-sm text-center font-semibold text-red-500 hover:text-white hover:bg-red-500 border border-red-500 hover:border-red-600 rounded transition duration-200" routerLink="/signup">Sign up</a>
+        </div>
+        <p class="mt-6 mb-4 text-sm text-center text-gray-500">
+            <span>© 2022 All rights reserved.</span>
+          </p>
+        </div>
+    </nav>
+</div>
+  
