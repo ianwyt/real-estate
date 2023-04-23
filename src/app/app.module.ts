@@ -10,6 +10,7 @@ import { BlogsComponent }   from './pages/blogs/blogs.component';
 import { SigninComponent }   from './pages/signin/signin.component';
 import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
+import { ErrorsComponent }   from './pages/not-found/errors.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -44,6 +45,7 @@ import { HttpCodesComponent } from './components/http-codes/http-codes.component
     SigninComponent,
     SignupComponent,
     ContactsComponent,
+    ErrorsComponent,
 
     // Components
     NavbarComponent,

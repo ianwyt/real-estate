@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
   
 @Component({
-    selector: 'blogs-app',
+    selector: 'errors-app',
     template: `
         <app-navbar-search></app-navbar-search>
-        <app-blog-list></app-blog-list>
+        <app-http-codes></app-http-codes>
         <app-newsletter></app-newsletter>
         <app-footer></app-footer>
-
     `
 })
-export class ContactsComponent { }
+export class ErrorsComponent { }

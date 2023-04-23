@@ -7,6 +7,7 @@ import { BlogsComponent } from './pages/blogs/blogs.component';
 import { SigninComponent }   from './pages/signin/signin.component';
 import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
+import { ErrorsComponent }   from './pages/not-found/errors.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Home page
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent }, // Sign in page
   { path: 'signup', component: SignupComponent }, // Sign up page
   { path: 'contacts', component: ContactsComponent }, // Contacts page
+  { path: '**', component: ErrorsComponent } // Errors page
 
 ];
 
