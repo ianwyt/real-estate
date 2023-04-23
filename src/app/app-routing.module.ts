@@ -9,6 +9,8 @@ import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
 
+
+// Routes
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Home page
   { path: 'blogs', component: BlogsComponent }, // Blog page
