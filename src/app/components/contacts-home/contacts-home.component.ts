@@ -17,7 +17,10 @@ export class ContactsHomeComponent implements OnInit {
   }
 
   initMap(): void {
-    const location = { lat: 40.7128, lng: -74.0060 };
+    const location = {
+      lat: 56.93986510848716,
+      lng: 24.156044676712227
+    };
     const map = new google.maps.Map(document.getElementById('map'), {
       center: location,
       zoom: 14,
@@ -27,6 +30,7 @@ export class ContactsHomeComponent implements OnInit {
       map: map,
     });
   }
+  
 
   loadMapScript(): void {
     const script = document.createElement('script');
