@@ -19,20 +19,37 @@ export class RegistrationComponent {
 
   register(formValues: any): void {
     const { firstName, lastName, email, password } = formValues;
-
+  
+    // Check if the email already exists in the 'users' collection
     this.firestore
-      .collection('users')
-      .add({
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        password: password,
-      })
-      .then(() => {
-        alert('Registration successful!');
+      .collection('users', (ref) => ref.where('email', '==', email))
+      .get()
+      .toPromise()
+      .then((querySnapshot) => {
+        if (!querySnapshot || querySnapshot.empty) {
+          // If the email is not found, create a new user
+          this.firestore
+            .collection('users')
+            .add({
+              first_name: firstName,
+              last_name: lastName,
+              email: email,
+              password: password,
+            })
+            .then(() => {
+              alert('Registration successful!');
+            })
+            .catch((error) => {
+              console.error('Error storing user data: ', error);
+              alert('Failed to register. Please try again.');
+            });
+        } else {
+          // If the email already exists, show an error message
+          alert('This email is already registered. Please use a different email or log in.');
+        }
       })
       .catch((error) => {
-        console.error('Error storing user data: ', error);
+        console.error('Error checking for existing email: ', error);
         alert('Failed to register. Please try again.');
       });
   }
