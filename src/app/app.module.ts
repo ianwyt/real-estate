@@ -20,6 +20,7 @@ import { BlogsHomeComponent } from './components/blogs-home/blogs-home.component
 import { ContactsHomeComponent } from './components/contacts-home/contacts-home.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BlogsHomeComponent,
     ContactsHomeComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
