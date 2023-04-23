@@ -35,6 +35,7 @@ import { NewsletterHeaderComponent } from './components/newsletter-header/newsle
 import { FeaturesComponent } from './components/features/features.component';
 import { HttpCodesComponent } from './components/http-codes/http-codes.component';
 import { TestimonialsFeatureComponent } from './components/testimonials-feature/testimonials-feature.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { TestimonialsFeatureComponent } from './components/testimonials-feature/
     NewsletterHeaderComponent,
     FeaturesComponent,
     HttpCodesComponent,
-    TestimonialsFeatureComponent
+    TestimonialsFeatureComponent,
+    CommentsComponent
   ],
   imports: [
     // Modules
