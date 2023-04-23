@@ -25,6 +25,8 @@ import { ContactsHomeComponent } from './components/contacts-home/contacts-home.
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarSearchComponent } from './components/navbar-search/navbar-search.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { LoginComponent } from './components/login/login.component';
     ContactsHomeComponent,
     NewsletterComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarSearchComponent,
+    BlogListComponent
   ],
   imports: [
     // Modules
