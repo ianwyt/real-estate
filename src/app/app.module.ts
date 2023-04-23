@@ -34,6 +34,7 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { NewsletterHeaderComponent } from './components/newsletter-header/newsletter-header.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { HttpCodesComponent } from './components/http-codes/http-codes.component';
+import { TestimonialsFeatureComponent } from './components/testimonials-feature/testimonials-feature.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { HttpCodesComponent } from './components/http-codes/http-codes.component
     BlogListComponent,
     NewsletterHeaderComponent,
     FeaturesComponent,
-    HttpCodesComponent
+    HttpCodesComponent,
+    TestimonialsFeatureComponent
   ],
   imports: [
     // Modules
