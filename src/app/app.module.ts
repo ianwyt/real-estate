@@ -32,6 +32,7 @@ import { NavbarSearchComponent } from './components/navbar-search/navbar-search.
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { NewsletterHeaderComponent } from './components/newsletter-header/newsletter-header.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { HttpCodesComponent } from './components/http-codes/http-codes.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FeaturesComponent } from './components/features/features.component';
     NavbarSearchComponent,
     BlogListComponent,
     NewsletterHeaderComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    HttpCodesComponent
   ],
   imports: [
     // Modules
