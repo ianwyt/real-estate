@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
 import { BlogsComponent }   from './pages/blogs/blogs.component';
+import { SigninComponent }   from './pages/signin/signin.component';
+import { SignupComponent }   from './pages/signup/signup.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -35,6 +37,8 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
     // Pages
     HomeComponent,
     BlogsComponent,
+    SigninComponent,
+    SignupComponent,
 
     // Components
     NavbarComponent,
