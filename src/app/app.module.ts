@@ -9,6 +9,7 @@ import { HomeComponent }   from './pages/home/home.component';
 import { BlogsComponent }   from './pages/blogs/blogs.component';
 import { SigninComponent }   from './pages/signin/signin.component';
 import { SignupComponent }   from './pages/signup/signup.component';
+import { ContactsComponent }   from './pages/contacts/contacts.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -29,6 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarSearchComponent } from './components/navbar-search/navbar-search.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { NewsletterHeaderComponent } from './components/newsletter-header/newsletter-header.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,7 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
     BlogsComponent,
     SigninComponent,
     SignupComponent,
+    ContactsComponent,
 
     // Components
     NavbarComponent,
@@ -50,7 +54,9 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
     FooterComponent,
     LoginComponent,
     NavbarSearchComponent,
-    BlogListComponent
+    BlogListComponent,
+    NewsletterHeaderComponent,
+    FeaturesComponent
   ],
   imports: [
     // Modules
