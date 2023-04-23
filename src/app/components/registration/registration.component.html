@@ -20,13 +20,13 @@
 
         <label class="inline-block mb-4">
             <input class="mr-1" type="checkbox" name="terms" value="1">
-            <span class="text-sm text-gray-500">By signing up, you agree to our <a class="font-bold hover:underline" href="#">Terms, Data Policy</a> and <a class="font-bold hover:underline" href="#">Cookies Policy</a>.</span>
+            <span class="text-sm text-gray-500">By signing up, you agree to our <a class="font-bold hover:underline" routerLink="/terms">Terms, Data Policy</a> and <a class="font-bold hover:underline" routerLink="/cookies">Cookies Policy</a>.</span>
         </label>
         <button [disabled]="registerForm.invalid" class="block w-full mb-4 px-5 py-3 text-sm bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200" type="submit">Sign Up</button>
         </form>
         <p class="text-sm text-gray-500">
         <span>Already have an account?</span>
-        <a class="font-bold hover:underline" href="#"> Sign In</a>
+        <a class="font-bold hover:underline" routerLink="/signin"> Sign In</a>
         </p>
     </div>
     </div>
