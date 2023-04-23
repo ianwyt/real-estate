@@ -1,39 +1,3 @@
-// import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-// declare var google: any;
-
-// @Component({
-//   selector: 'app-contacts-home',
-//   templateUrl: './contacts-home.component.html',
-//   styleUrls: ['./contacts-home.component.css']
-// })
-// export class ContactsHomeComponent implements OnInit, AfterViewInit {
-//   constructor() {}
-
-//   ngOnInit(): void {}
-
-//   ngAfterViewInit(): void {
-//     this.initMap();
-//   }
-
-//   private initMap(): void {
-//     const mapOptions = {
-//       zoom: 14,
-//       center: { lat: 40.7128, lng: -74.0060 }, // Replace with your desired coordinates
-//     };
-
-//     const map = new google.maps.Map(
-//       document.getElementById('map') as HTMLElement,
-//       mapOptions
-//     );
-
-//     const marker = new google.maps.Marker({
-//       position: { lat: 40.7128, lng: -74.0060 }, // Replace with your desired coordinates
-//       map: map,
-//     });
-//   }
-// }
-
 import { Component, OnInit } from '@angular/core';
 
 declare let google: any;
