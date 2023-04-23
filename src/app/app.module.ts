@@ -36,6 +36,7 @@ import { FeaturesComponent } from './components/features/features.component';
 import { HttpCodesComponent } from './components/http-codes/http-codes.component';
 import { TestimonialsFeatureComponent } from './components/testimonials-feature/testimonials-feature.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     FeaturesComponent,
     HttpCodesComponent,
     TestimonialsFeatureComponent,
-    CommentsComponent
+    CommentsComponent,
+    MobileNavbarComponent
   ],
   imports: [
     // Modules
