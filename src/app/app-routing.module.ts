@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'blogs', component: BlogsComponent }, // Blog page
   { path: 'signin', component: SigninComponent }, // Sign in page
   { path: 'signup', component: SignupComponent }, // Sign up page
-  { path: 'contacts', component: ContactsComponent }, // Contacts page
+  { path: 'newsletter', component: ContactsComponent }, // Newsletter page
   { path: '**', component: ErrorsComponent } // Errors page
 
 ];

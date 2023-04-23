@@ -1,7 +1,7 @@
 <nav class="relative py-8 bg-red-500">
     <div class="container px-4 mx-auto">
       <div class="flex justify-between items-center">
-        <a class="text-gray-600 text-2xl leading-none" href="#">
+        <a class="text-gray-600 text-2xl leading-none" aria-current="page" routerLink="">
           <img class="h-8" src="assets/plain-assets/logos/plain-light.svg" alt="" width="auto">
         </a>
         <div class="lg:hidden">
@@ -13,14 +13,14 @@
           </button>
         </div>
         <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex ml-auto mr-auto items-center w-auto space-x-12">
-          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" href="#">About</a></li>
-          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" href="#">Company</a></li>
-          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" href="#">Services</a></li>
-          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" href="#">Testimonials</a></li>
+          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" routerLink="/about">About</a></li>
+          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" routerLink="/blogs">Blogs</a></li>
+          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" routerLink="/newsletter">Newsletter</a></li>
+          <li><a class="text-sm text-red-50 hover:text-red-200 font-medium" routerLink="/testimonials">Testimonials</a></li>
         </ul>
         <ul class="hidden lg:flex items-center w-auto">
-          <li class="mr-12"><a class="text-sm text-red-50 hover:text-red-200 font-medium" href="#">Sign in</a></li>
-          <li><a class="block px-5 py-3 text-sm text-center font-semibold text-white hover:text-red-500 hover:bg-white border border-white rounded transition duration-200" href="#">Sign up</a></li>
+          <li class="mr-12"><a class="text-sm text-red-50 hover:text-red-200 font-medium" routerLink="/signin">Sign in</a></li>
+          <li><a class="block px-5 py-3 text-sm text-center font-semibold text-white hover:text-red-500 hover:bg-white border border-white rounded transition duration-200" routerLink="/signup">Sign up</a></li>
         </ul>
       </div>
     </div>
@@ -28,8 +28,8 @@
       <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
       <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
         <div class="flex items-center mb-12">
-          <a class="mr-auto text-2xl font-semibold leading-none" href="#">
-            <img class="h-8" src="plain-assets/logos/plain-red.svg" alt="" width="auto">
+          <a class="mr-auto text-2xl font-semibold leading-none" aria-current="page" routerLink="">
+            <img class="h-8" src="assets/plain-assets/logos/plain-red.svg" alt="" width="auto">
           </a>
           <button class="navbar-close">
             <svg class="h-6 w-6 cursor-pointer hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,14 +39,14 @@
         </div>
         <div>
           <ul>
-            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" href="#">About</a></li>
-            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" href="#">Company</a></li>
-            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" href="#">Services</a></li>
-            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" href="#">Testimonials</a></li>
+            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/about">About</a></li>
+            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/blogs">Blogs</a></li>
+            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/newsletter">Newsletter</a></li>
+            <li class="mb-1"><a class="block p-4 text-sm font-semibold hover:bg-red-50 hover:text-red-500 rounded" routerLink="/testimonials">Testimonials</a></li>
           </ul>
         </div>
         <div class="mt-auto">
-          <div class="pt-6"><a class="block px-5 py-3 mb-3 text-sm text-center bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200" href="#">Sign in</a><a class="block px-5 py-3 text-sm text-center font-semibold text-red-500 hover:text-white hover:bg-red-500 border border-red-500 hover:border-red-600 rounded transition duration-200" href="#">Sign up</a></div>
+          <div class="pt-6"><a class="block px-5 py-3 mb-3 text-sm text-center bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200" routerLink="/signin">Sign in</a><a class="block px-5 py-3 text-sm text-center font-semibold text-red-500 hover:text-white hover:bg-red-500 border border-red-500 hover:border-red-600 rounded transition duration-200" routerLink="/signup">Sign up</a></div>
           <p class="mt-6 mb-4 text-sm text-center text-gray-500">
             <span>© 2022 All rights reserved.</span>
           </p>

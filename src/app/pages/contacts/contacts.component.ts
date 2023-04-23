@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
     selector: 'blogs-app',
     template: `
         <app-navbar-search></app-navbar-search>
-        <app-blog-list></app-blog-list>
-        <app-newsletter></app-newsletter>
+        <app-newsletter-header></app-newsletter-header>
+        <app-features></app-features>
         <app-footer></app-footer>
 
     `
