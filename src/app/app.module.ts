@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
 import { BlogsComponent }   from './pages/blogs/blogs.component';
+import { SigninComponent }   from './pages/signin/signin.component';
+import { SignupComponent }   from './pages/signup/signup.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -25,6 +27,8 @@ import { ContactsHomeComponent } from './components/contacts-home/contacts-home.
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarSearchComponent } from './components/navbar-search/navbar-search.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,8 @@ import { LoginComponent } from './components/login/login.component';
     // Pages
     HomeComponent,
     BlogsComponent,
+    SigninComponent,
+    SignupComponent,
 
     // Components
     NavbarComponent,
@@ -42,7 +48,9 @@ import { LoginComponent } from './components/login/login.component';
     ContactsHomeComponent,
     NewsletterComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarSearchComponent,
+    BlogListComponent
   ],
   imports: [
     // Modules

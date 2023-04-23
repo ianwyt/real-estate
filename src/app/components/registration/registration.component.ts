@@ -1,25 +1,3 @@
-// import { Component } from '@angular/core';
-// import { AngularFirestore } from '@angular/fire/compat/firestore';
-
-// @Component({
-//   selector: 'app-registration',
-//   templateUrl: './registration.component.html',
-//   styleUrls: ['./registration.component.scss']
-// })
-// export class RegistrationComponent {
-//   constructor(private firestore: AngularFirestore) { }
-
-//   async register(first_name: string, last_name: string, email: string, password: string) {
-//     try {
-//       await this.firestore.collection('users').add({ first_name, last_name, email, password });
-//       alert('Registration successful!');
-//     } catch (error) {
-//       console.error('Error storing user data: ', error);
-//       alert('Failed to register. Please try again.');
-//     }
-//   }
-// }
-
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
