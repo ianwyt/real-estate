@@ -39,6 +39,7 @@ import { TestimonialsFeatureComponent } from './components/testimonials-feature/
 import { CommentsComponent } from './components/comments/comments.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { BlogPostComponent } from './components/blog-post/blog-post.component';
     TestimonialsFeatureComponent,
     CommentsComponent,
     MobileNavbarComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    BlogEditorComponent
   ],
   imports: [
     // Modules
