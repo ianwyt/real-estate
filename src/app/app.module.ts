@@ -11,6 +11,7 @@ import { SigninComponent }   from './pages/signin/signin.component';
 import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
+import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -37,6 +38,7 @@ import { HttpCodesComponent } from './components/http-codes/http-codes.component
 import { TestimonialsFeatureComponent } from './components/testimonials-feature/testimonials-feature.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.
     SignupComponent,
     ContactsComponent,
     ErrorsComponent,
+    BlogPostPageComponent,
 
     // Components
     NavbarComponent,
@@ -66,7 +69,8 @@ import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.
     HttpCodesComponent,
     TestimonialsFeatureComponent,
     CommentsComponent,
-    MobileNavbarComponent
+    MobileNavbarComponent,
+    BlogPostComponent
   ],
   imports: [
     // Modules
