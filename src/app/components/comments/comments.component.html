@@ -1,1 +1,20 @@
-<p>comments works!</p>
+<div class="container mx-auto mt-10 px-4">
+    <h1 class="text-4xl mb-6">Comment Section</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="commentForm">
+      <div class="mb-4">
+        <label for="username" class="block mb-2">Name:</label>
+        <input type="text" formControlName="username" class="w-full p-2 border border-gray-300 rounded" id="username" required>
+      </div>
+      <div class="mb-4">
+        <label for="comment" class="block mb-2">Comment:</label>
+        <textarea formControlName="comment" class="w-full p-2 border border-gray-300 rounded" id="comment" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+    </form>
+    <div *ngFor="let comment of comments" class="bg-white shadow-md rounded p-4 my-3">
+      <div>
+        <h5 class="text-xl font-bold">{{ comment.username }}</h5>
+        <p class="text-lg mt-2">{{ comment.comment }}</p>
+      </div>
+    </div>
+</div>  
