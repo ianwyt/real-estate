@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
         <app-navbar-search></app-navbar-search>
         <app-team></app-team>
         <app-footer></app-footer>
-
     `
 })
 export class AboutComponent { }
