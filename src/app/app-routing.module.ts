@@ -10,11 +10,13 @@ import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
 import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
 import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
+import { AboutComponent }   from './pages/about/about.component';
 
 
 // Routes
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Home page
+  { path: 'about', component: AboutComponent }, // About page
   { path: 'blogs', component: BlogsComponent }, // Blog page
   { path: 'signin', component: SigninComponent }, // Sign in page
   { path: 'signup', component: SignupComponent }, // Sign up page

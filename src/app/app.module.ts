@@ -15,6 +15,7 @@ import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
 import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
 import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
+import { AboutComponent }   from './pages/about/about.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -62,6 +63,7 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     ErrorsComponent,
     BlogPostPageComponent,
     TestimonialsComponent,
+    AboutComponent,
 
     // Components
     NavbarComponent,
