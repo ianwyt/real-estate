@@ -44,6 +44,7 @@ import { HowItWorksComponent } from './components/how-it-works/how-it-works.comp
 import { TeamComponent } from './components/team/team.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { FeaturesPointsComponent } from './components/features-points/features-points.component';
+import { FeaturesHeaderComponent } from './components/features-header/features-header.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { FeaturesPointsComponent } from './components/features-points/features-p
     HowItWorksComponent,
     TeamComponent,
     StatsComponent,
-    FeaturesPointsComponent
+    FeaturesPointsComponent,
+    FeaturesHeaderComponent
   ],
   imports: [
     // Modules
