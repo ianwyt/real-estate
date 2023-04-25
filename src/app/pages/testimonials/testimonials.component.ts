@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
         <app-navbar-search></app-navbar-search>
         <app-features-header></app-features-header>
         <app-testimonials-feature></app-testimonials-feature>
+        <app-newsletter></app-newsletter>
         <app-footer></app-footer>
 
     `
