@@ -12,6 +12,7 @@ import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
 import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
+import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -58,6 +59,7 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     ContactsComponent,
     ErrorsComponent,
     BlogPostPageComponent,
+    TestimonialsComponent,
 
     // Components
     NavbarComponent,

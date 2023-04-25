@@ -9,6 +9,7 @@ import { SignupComponent }   from './pages/signup/signup.component';
 import { ContactsComponent }   from './pages/contacts/contacts.component';
 import { ErrorsComponent }   from './pages/not-found/errors.component';
 import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
+import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
 
 
 // Routes
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent }, // Sign in page
   { path: 'signup', component: SignupComponent }, // Sign up page
   { path: 'newsletter', component: ContactsComponent }, // Newsletter page
+  { path: 'testimonials', component: TestimonialsComponent }, // Testimonials page
   { path: 'testblog', component: BlogPostPageComponent }, // Test blog post page
   { path: '**', component: ErrorsComponent } // Errors page
 
