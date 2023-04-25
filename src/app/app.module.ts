@@ -40,6 +40,10 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { TeamComponent } from './components/team/team.component';
+import { StatsComponent } from './components/stats/stats.component';
+import { FeaturesPointsComponent } from './components/features-points/features-points.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +76,11 @@ import { BlogEditorComponent } from './components/blog-editor/blog-editor.compon
     CommentsComponent,
     MobileNavbarComponent,
     BlogPostComponent,
-    BlogEditorComponent
+    BlogEditorComponent,
+    HowItWorksComponent,
+    TeamComponent,
+    StatsComponent,
+    FeaturesPointsComponent
   ],
   imports: [
     // Modules
