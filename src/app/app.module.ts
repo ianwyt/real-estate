@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
@@ -92,6 +94,8 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
 
     // Firebase
     AngularFireModule.initializeApp(environment.firebase),
