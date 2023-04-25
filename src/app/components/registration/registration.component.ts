@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -15,11 +16,11 @@ export class RegistrationComponent {
     password: new FormControl('', Validators.required),
   });
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: AngularFirestore, private router: Router) {}
 
   register(formValues: any): void {
     const { firstName, lastName, email, password } = formValues;
-  
+
     // Check if the email already exists in the 'users' collection
     this.firestore
       .collection('users', (ref) => ref.where('email', '==', email))
@@ -37,7 +38,8 @@ export class RegistrationComponent {
               password: password,
             })
             .then(() => {
-              alert('Registration successful!');
+              console.log('Registration successful!');
+              this.router.navigate(['/blogs']); // replace '/blog' with the route to your blog page
             })
             .catch((error) => {
               console.error('Error storing user data: ', error);
