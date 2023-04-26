@@ -31,6 +31,9 @@ export class NavbarSearchComponent {
       case 'newsletter':
         this.router.navigate(['/newsletter']);
         break;
+      case 'submitblog':
+        this.router.navigate(['/submitblog']);
+        break;
       default:
         this.router.navigate(['/page-not-found']);
         break;
