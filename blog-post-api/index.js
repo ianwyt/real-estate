@@ -3,7 +3,7 @@ const cors = require('cors');
 const multer = require('multer');
 const upload = multer();
 const admin = require('firebase-admin');
-const { Storage } = require('@google-cloud/storage'); // Add this line
+const { Storage } = require('@google-cloud/storage');
 
 // Import your Firebase service account credentials
 const serviceAccount = require('./serviceAccountKey.json');
@@ -15,11 +15,11 @@ admin.initializeApp({
 });
 
 const storage = new Storage({
-  projectId: 'your_project_id',
+  projectId: 'your_project_id', // Replace with your actual project ID
   keyFilename: './serviceAccountKey.json',
 });
 
-const bucket = storage.bucket('your_bucket_name.appspot.com');
+const bucket = storage.bucket('bachelor-comment.appspot.com'); // Replace with your actual bucket name
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -29,10 +29,10 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.post('/api/blog-posts', upload.single('image'), async (req, res) => { // Change to upload.single('image')
+app.post('/api/blog-posts', upload.single('image'), async (req, res) => {
     try {
       const { title, content } = req.body;
-      const image = req.file; // Change this line
+      const image = req.file;
 
       // Validate the incoming data
       if (!title || !content || !image) {
