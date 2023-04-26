@@ -16,6 +16,8 @@ import { ErrorsComponent }   from './pages/not-found/errors.component';
 import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.component';
 import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
 import { AboutComponent }   from './pages/about/about.component';
+import { BlogPostSubmissionComponent }   from './pages/blog-post-submission/blog-post-submission.component';
+
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -49,6 +51,7 @@ import { TeamComponent } from './components/team/team.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { FeaturesPointsComponent } from './components/features-points/features-points.component';
 import { FeaturesHeaderComponent } from './components/features-header/features-header.component';
+import { BlogSubmissionComponent } from './components/blog-submission/blog-submission.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,7 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     BlogPostPageComponent,
     TestimonialsComponent,
     AboutComponent,
+    BlogPostSubmissionComponent,
 
     // Components
     NavbarComponent,
@@ -88,7 +92,8 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     TeamComponent,
     StatsComponent,
     FeaturesPointsComponent,
-    FeaturesHeaderComponent
+    FeaturesHeaderComponent,
+    BlogSubmissionComponent
   ],
   imports: [
     // Modules
