@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'; 
 
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
@@ -49,6 +50,7 @@ import { TeamComponent } from './components/team/team.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { FeaturesPointsComponent } from './components/features-points/features-points.component';
 import { FeaturesHeaderComponent } from './components/features-header/features-header.component';
+import { BlogPostSubmissionComponent } from './components/blog-post-submission/blog-post-submission.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,8 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     TeamComponent,
     StatsComponent,
     FeaturesPointsComponent,
-    FeaturesHeaderComponent
+    FeaturesHeaderComponent,
+    BlogPostSubmissionComponent
   ],
   imports: [
     // Modules
@@ -98,6 +101,7 @@ import { FeaturesHeaderComponent } from './components/features-header/features-h
     ReactiveFormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     // Firebase
     AngularFireModule.initializeApp(environment.firebase),
