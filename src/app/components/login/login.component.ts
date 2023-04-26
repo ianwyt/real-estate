@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
           console.log('Login successful!');
           this.router.navigate(['/blogs']); // replace '/blogs' with the route to your blog page
         } else {
-          alert('Failed to login. Please check your email and password, or register first.');
+          console.log('Failed to login. Please check your email and password, or register first.');
         }
       }
     }

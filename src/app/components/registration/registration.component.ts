@@ -43,16 +43,16 @@ export class RegistrationComponent {
             })
             .catch((error) => {
               console.error('Error storing user data: ', error);
-              alert('Failed to register. Please try again.');
+              console.log('Failed to register. Please try again.');
             });
         } else {
           // If the email already exists, show an error message
-          alert('This email is already registered. Please use a different email or log in.');
+          console.log('This email is already registered. Please use a different email or log in.');
         }
       })
       .catch((error) => {
         console.error('Error checking for existing email: ', error);
-        alert('Failed to register. Please try again.');
+        console.log('Failed to register. Please try again.');
       });
   }
 }
