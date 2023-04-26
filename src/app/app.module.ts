@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Services
+import { NewsletterService } from './services/newsletter/newsletter.service';
+
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
 import { BlogsComponent }   from './pages/blogs/blogs.component';
@@ -24,6 +27,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireFunctionsModule } from '@angular/fire/compat/functions';
 import { environment } from '../environments/environment';
 
 // Components
@@ -108,9 +112,11 @@ import { BlogSubmissionComponent } from './components/blog-submission/blog-submi
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFireFunctionsModule,
+
   ],
-  providers: [],
+  providers: [NewsletterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
