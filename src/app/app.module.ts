@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Services
 import { NewsletterService } from './services/newsletter/newsletter.service';
+import { BlogPostService } from './services/blog-post/blog-post.service';
 
 // Pages
 import { HomeComponent }   from './pages/home/home.component';
@@ -116,7 +117,7 @@ import { BlogSubmissionComponent } from './components/blog-submission/blog-submi
     AngularFireFunctionsModule,
 
   ],
-  providers: [NewsletterService],
+  providers: [NewsletterService, BlogPostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
