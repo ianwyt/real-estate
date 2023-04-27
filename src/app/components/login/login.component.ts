@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private auth: AngularFireAuth,
-    private router: Router
+    private router: Router,
+    private authService: AuthenticationService
   ) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -42,6 +44,16 @@ export class LoginComponent implements OnInit {
           console.log('Please check your email and password, or register first.');
         }
       }
+    }
+  }
+
+  async signInWithGoogle(): Promise<void> {
+    try {
+      await this.authService.signInWithGoogle();
+      console.log('Sign in with Google successful!');
+      this.router.navigate(['/blogs']); // navigate to the blogs route after successful sign-in
+    } catch (error) {
+      console.error('Failed to sign in with Google:', error);
     }
   }
 }
