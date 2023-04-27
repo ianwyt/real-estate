@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication/authentication.service';
 
 @Component({
   selector: 'app-registration',
@@ -16,43 +16,24 @@ export class RegistrationComponent {
     password: new FormControl('', Validators.required),
   });
 
-  constructor(private firestore: AngularFirestore, private router: Router) {}
+  constructor(private authService: AuthenticationService, private router: Router) {}
 
-  register(formValues: any): void {
-    const { firstName, lastName, email, password } = formValues;
+  private isFirebaseError(error: unknown): error is { code: string } {
+    return (error as { code?: string }).code !== undefined;
+  }
 
-    // Check if the email already exists in the 'users' collection
-    this.firestore
-      .collection('users', (ref) => ref.where('email', '==', email))
-      .get()
-      .toPromise()
-      .then((querySnapshot) => {
-        if (!querySnapshot || querySnapshot.empty) {
-          // If the email is not found, create a new user
-          this.firestore
-            .collection('users')
-            .add({
-              first_name: firstName,
-              last_name: lastName,
-              email: email,
-              password: password,
-            })
-            .then(() => {
-              console.log('Registration successful!');
-              this.router.navigate(['/blogs']); // replace '/blog' with the route to your blog page
-            })
-            .catch((error) => {
-              console.error('Error storing user data: ', error);
-              console.log('Failed to register. Please try again.');
-            });
-        } else {
-          // If the email already exists, show an error message
-          console.log('This email is already registered. Please use a different email or log in.');
-        }
-      })
-      .catch((error) => {
-        console.error('Error checking for existing email: ', error);
+  async register(formValues: any): Promise<void> {
+    const { email, password } = formValues;
+
+    try {
+      await this.authService.register(email, password);
+      this.router.navigate(['/blogs']); // replace '/blogs' with the route to your blog page
+    } catch (error) {
+      if (this.isFirebaseError(error) && error.code === 'auth/email-already-in-use') {
+        console.log('This email is already registered. Please use a different email or log in.');
+      } else {
         console.log('Failed to register. Please try again.');
-      });
+      }
+    }
   }
 }
