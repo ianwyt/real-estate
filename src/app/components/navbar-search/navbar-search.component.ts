@@ -7,7 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar-search.component.css']
 })
 export class NavbarSearchComponent {
+  navbarOpen = false;
+
   constructor(private router: Router) { }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 
   search(query: string) {
     const lowerCaseQuery = query.toLowerCase();
