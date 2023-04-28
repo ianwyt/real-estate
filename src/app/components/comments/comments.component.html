@@ -6,7 +6,7 @@
                     <input [(ngModel)]="title" name="title" required class="w-full py-3 pl-3 mb-4 border rounded" type="text" placeholder="Title">
                     <input [(ngModel)]="email" name="email" required email class="w-full py-3 pl-3 mb-4 border rounded" type="email" placeholder="E-mail">
                     <textarea [(ngModel)]="comment" name="comment" required class="mb-4 w-full p-3 border rounded resize-none" cols="30" rows="2" placeholder="Comment"></textarea>
-                    <button type="submit" [disabled]="!commentForm.valid" class="block w-full px-5 py-3 text-sm bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200">Post Comment</button>
+                    <button type="submit" [disabled]="!commentForm.valid" class="block w-full px-5 py-3 text-sm bg-red-500 hover:bg-red-600 text-white font-semibold border border-red-500 hover:border-red-600 rounded transition duration-200">Submit</button>
                 </form>
             </div>
         </div>
