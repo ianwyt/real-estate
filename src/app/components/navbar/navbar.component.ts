@@ -1,25 +1,17 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
-  @ViewChild('burgerMenu') burgerMenu!: ElementRef;
+export class NavbarComponent {
+  navbarOpen = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
-  toggleBurgerMenu(): void {
-    this.burgerMenu.nativeElement.classList.toggle('hidden');
-  }
-
-  collapseBurgerMenu(): void {
-    if (!this.burgerMenu.nativeElement.classList.contains('hidden')) {
-      this.burgerMenu.nativeElement.classList.add('hidden');
-    }
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }

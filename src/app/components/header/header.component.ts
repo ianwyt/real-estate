@@ -1,38 +1,17 @@
-import { Component, OnInit, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
-  mobileMenuVisible: boolean;
+export class HeaderComponent {
+  navbarOpen = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.mobileMenuVisible = false;
-  }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
-    this.updateMobileMenuVisibility();
-  }
-
-  updateMobileMenuVisibility(): void {
-    const mobileMenu = this.el.nativeElement.querySelector('.navbar-menu');
-    const mobileMenuBackdrop = this.el.nativeElement.querySelector('.navbar-backdrop');
-
-    if (this.mobileMenuVisible) {
-      this.renderer.removeClass(mobileMenu, 'hidden');
-      this.renderer.removeClass(mobileMenuBackdrop, 'hidden');
-    } else {
-      this.renderer.addClass(mobileMenu, 'hidden');
-      this.renderer.addClass(mobileMenuBackdrop, 'hidden');
-    }
-  }
-
-  toggleBurgerMenu(): void {
-    this.mobileMenuVisible = !this.mobileMenuVisible;
-    this.updateMobileMenuVisibility();
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }
