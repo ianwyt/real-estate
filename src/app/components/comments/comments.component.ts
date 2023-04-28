@@ -1,58 +1,49 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { map } from 'rxjs/operators';
-
-interface Comment {
-  id?: string;
-  username: string;
-  comment: string;
-  timestamp: Date;
-}
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FirebaseService } from '../../services/firebase/firebase.service';
+import { AuthenticationService } from '../../services/authentication/authentication.service';
+import { Subscription } from 'rxjs';
+import { User } from 'firebase/auth';
 
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.css']
 })
-export class CommentsComponent implements OnInit {
-  commentForm: FormGroup;
-  comments: Comment[];
+export class CommentsComponent implements OnInit, OnDestroy {
+  title = '';
+  email = '';
+  comment = '';
+  user: User | null = null;
+  private userSubscription!: Subscription;
 
-  constructor(private fb: FormBuilder, private firestore: AngularFirestore) {
-    this.commentForm = this.fb.group({
-      username: ['', Validators.required],
-      comment: ['', Validators.required]
-    });
-    this.comments = [];
-  }
+  constructor(private firebaseService: FirebaseService, private authService: AuthenticationService) {}
 
   ngOnInit(): void {
-    this.firestore.collection<Comment>('comments', ref => ref.orderBy('timestamp', 'desc'))
-      .snapshotChanges().pipe(map(actions => {
-        return actions.map(a => {
-          const data = a.payload.doc.data() as Comment;
-          const id = a.payload.doc.id;
-          return { id, ...data };
-        });
-      })).subscribe(comments => {
-        this.comments = comments;
-      });
+    this.userSubscription = this.authService.user$.subscribe((user) => {
+      this.user = user;
+      if (user) {
+        this.email = user.email ?? '';
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.userSubscription.unsubscribe();
   }
 
   onSubmit(): void {
-    if (this.commentForm.valid) {
-      const usernameControl = this.commentForm.get('username');
-      const commentControl = this.commentForm.get('comment');
-      if (usernameControl && commentControl) {
-        this.firestore.collection('comments').add({
-          username: usernameControl.value,
-          comment: commentControl.value,
-          timestamp: new Date()
-        }).then(() => {
-          this.commentForm.reset();
-        });
-      }
+    if (this.user && this.title && this.email && this.comment) {
+      this.firebaseService.submitComment({
+        title: this.title,
+        email: this.email,
+        comment: this.comment
+      });
+
+      // Reset the form
+      this.title = '';
+      this.comment = '';
+    } else {
+      console.error('User not authenticated');
     }
   }
 }

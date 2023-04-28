@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
-import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, User } from 'firebase/auth';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor() {}
+  private userSubject = new BehaviorSubject<User | null>(null);
+  user$ = this.userSubject.asObservable();
+
+  constructor() {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      this.userSubject.next(user);
+    });
+  }
 
   async register(email: string, password: string): Promise<void> {
     try {
