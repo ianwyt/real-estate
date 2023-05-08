@@ -12,7 +12,7 @@ import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.c
 import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
 import { AboutComponent }   from './pages/about/about.component';
 import { BlogPostSubmissionComponent }   from './pages/blog-post-submission/blog-post-submission.component';
-
+import { ShowroomComponent } from './pages/showroom/showroom.component';
 
 // Routes
 const routes: Routes = [
@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'testimonials', component: TestimonialsComponent }, // Testimonials page
   { path: 'submitblog', component: BlogPostSubmissionComponent }, // BlogPost Submission page
   { path: 'testblog', component: BlogPostPageComponent }, // Test blog post page
+  { path: 'showroom', component: ShowroomComponent }, // Test blog post page
   { path: '**', component: ErrorsComponent } // Errors page
 
 ];

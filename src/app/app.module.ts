@@ -21,7 +21,7 @@ import { BlogPostPageComponent }   from './pages/blog-post-page/blog-post-page.c
 import { TestimonialsComponent }   from './pages/testimonials/testimonials.component';
 import { AboutComponent }   from './pages/about/about.component';
 import { BlogPostSubmissionComponent }   from './pages/blog-post-submission/blog-post-submission.component';
-
+import { ShowroomComponent }   from './pages/showroom/showroom.component';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -75,6 +75,7 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
     TestimonialsComponent,
     AboutComponent,
     BlogPostSubmissionComponent,
+    ShowroomComponent,
 
     // Components
     NavbarComponent,
