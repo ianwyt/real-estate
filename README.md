@@ -12,38 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## To fix Firebase error
 
-Go to `node_modules/@angular/fire/compat/firestore/interfaces.d.ts`. All of this that give errors:
-
-export interface DocumentSnapshotExists<T> extends firebase.firestore.DocumentSnapshot {
-        readonly exists: true;
-        data(options?: SnapshotOptions): T;
-    }
-
-export interface QueryDocumentSnapshot<T> extends firebase.firestore.QueryDocumentSnapshot {
-    data(options?: SnapshotOptions): T;
-}
-export interface QuerySnapshot<T> extends firebase.firestore.QuerySnapshot {
-    readonly docs: QueryDocumentSnapshot<T>[];
-}
-export interface DocumentChange<T> extends firebase.firestore.DocumentChange {
-    readonly doc: QueryDocumentSnapshot<T>;
-}
-
-To this:
-
-`export interface DocumentSnapshotExists<T> extends firebase.firestore.DocumentSnapshot <T>{
-    readonly exists: true;
-    data(options?: SnapshotOptions): T;
-}
-export interface QueryDocumentSnapshot<T> extends firebase.firestore.QueryDocumentSnapshot <T>{
-    data(options?: SnapshotOptions): T;
-}
-export interface QuerySnapshot<T> extends firebase.firestore.QuerySnapshot <T>{
-    readonly docs: QueryDocumentSnapshot<T>[];
-}
-export interface DocumentChange<T> extends firebase.firestore.DocumentChange <T> {
-    readonly doc: QueryDocumentSnapshot<T>;
-}
+Go to [Stackoverflow](https://stackoverflow.com/questions/74745954/error-angular-fire-build-incorrectly-extends-interface) and find the right answer with a checkmark.
 
 ## Development server
 
