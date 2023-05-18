@@ -1,0 +1,23 @@
+<div class="card bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden border-none rounded-lg">
+    <img #draggable class="w-24 h-24 bg-white object-cover rounded-md absolute z-10" src="https://images.unsplash.com/photo-1531434840235-f8bffa85f0e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJhdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="draggable image">
+    <div class="bg-white rounded-lg">
+    <div class="bg-blue-600 px-8 py-4">
+        <p class="text-white uppercase font-bold">Upload Files</p>
+        <a href="#" class="text-white absolute top-0 mt-3 right-0 mr-5 text-xl font-thin"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <p class="text-sm px-4 mt-2">File Upload UI Design<span #counter class="text-xs text-gray-400 float-right mr-5">0Kb</span></p>
+    <div class="h-2 w-full bg-gray-300 my-4 rounded-full mx-4 overflow-hidden">
+        <div #progressLine class="bg-blue-600 h-2 rounded-full"></div>
+    </div>
+    <p #status class="text-blue-600 text-xs mx-4 mt-2">Pause</p>
+    <div #dropzone class="border-2 border-dashed border-gray-300 p-6 rounded-lg m-4 text-center">
+        <img class="w-16" src="https://cdn-icons-png.flaticon.com/512/2716/2716054.png" alt="dropzone icon">
+        <p class="text-lg text-gray-400">Drag files here or <span class="font-bold text-blue-600"><a href="#">browse</a></span></p>
+    </div>
+    <div #imgPreviewArea class="w-full mx-auto hidden h-48 rounded-lg overflow-hidden mb-5">
+        <img #imgPrev class="w-full object-cover" src="https://images.unsplash.com/photo-1531434840235-f8bffa85f0e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJhdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="image preview">
+    </div>
+    <button #saveBtn class="uppercase transition duration-300 ease-in-out p-2 text-white bg-blue-600 mx-auto block border-none rounded-md w-28 text-center mb-5 shadow-lg">Save</button>
+    </div>
+</div>
+  

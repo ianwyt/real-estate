@@ -59,6 +59,7 @@ import { FeaturesPointsComponent } from './components/features-points/features-p
 import { FeaturesHeaderComponent } from './components/features-header/features-header.component';
 import { BlogSubmissionComponent } from './components/blog-submission/blog-submission.component';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
+import { UploadPhotoComponent } from './components/upload-photo/upload-photo.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,8 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
     FeaturesPointsComponent,
     FeaturesHeaderComponent,
     BlogSubmissionComponent,
-    CommentListComponent
+    CommentListComponent,
+    UploadPhotoComponent
   ],
   imports: [
     // Modules
