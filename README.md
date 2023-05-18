@@ -14,7 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Go to `node_modules/@angular/fire/compat/firestore/interfaces.d.ts`. All of this that give errors:
 
-`export interface DocumentSnapshotExists<T> extends firebase.firestore.DocumentSnapshot {
+export interface DocumentSnapshotExists<T> extends firebase.firestore.DocumentSnapshot {
         readonly exists: true;
         data(options?: SnapshotOptions): T;
     }
@@ -27,7 +27,7 @@ export interface QuerySnapshot<T> extends firebase.firestore.QuerySnapshot {
 }
 export interface DocumentChange<T> extends firebase.firestore.DocumentChange {
     readonly doc: QueryDocumentSnapshot<T>;
-}`
+}
 
 To this:
 
@@ -43,7 +43,7 @@ export interface QuerySnapshot<T> extends firebase.firestore.QuerySnapshot <T>{
 }
 export interface DocumentChange<T> extends firebase.firestore.DocumentChange <T> {
     readonly doc: QueryDocumentSnapshot<T>;
-}`
+}
 
 ## Development server
 
